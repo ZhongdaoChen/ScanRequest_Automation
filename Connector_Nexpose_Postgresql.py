@@ -13,7 +13,8 @@ def setup_connection_postgresql():
     conn = psycopg2.connect(host=“INPUT DB ADDRESS HERE”, port='5432', database='postgres', user=database_username, password=database_password)
     '''
 
-    conn = psycopg2.connect(host="10.200.0.41", port="5432", database="postgres", user="postgres", password=“testtest”)
+    conn = psycopg2.connect(host="10.200.0.41", port="5432", database="postgres", user="postgres", password=“testtest”) # this is just temporary connection. When you see this code, the server has been removed. 
+    
     if conn:
         print("Connection Established.")
         return conn
