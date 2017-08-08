@@ -19,13 +19,9 @@ def user_console():
         if Connector_Nexpose_Postgresql.nexpose_scan_request(nexpose_connection, choice) == 'Successful':
             Connector_Nexpose_Postgresql.nexpose_report_request(nexpose_connection)
 
-
     else:
         #  if not in our DMZ, process would be exit in Confirm in DMZ function. So pass here
         pass
-
-
-
 
 if __name__ == "__main__":
     while(1):
