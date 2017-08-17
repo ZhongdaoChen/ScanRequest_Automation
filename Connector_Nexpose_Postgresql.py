@@ -71,8 +71,6 @@ def nexpose_connection():
             print("Username or password incorrect, please retry")
 
 
-
-
 def nexpose_report_request(nexposeClient):
     query = ""
     site_ids = []
