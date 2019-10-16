@@ -17,7 +17,7 @@ def comfirm_in_DMZ(conn):
                      '40':'Ext-Server DMZ (Private VLAN) VLAN 150/850/950]'}
     cur = conn.cursor()
     temp_asset_id = Getter_And_Setter.get_host_assetID()
-    sql = 'SELECT site_id from "public"."dim_site_asset" WHERE asset_id =' + "'" + temp_asset_id + "'"
+    sql = 'SELECT site_id from "public"."dim_site_asset" WHERE asset_id =' + "'" + temp_asset_id + "'"  #There is SQL injection vulnerability here, but this script is internal used only, so we accept the risk for now. 
 
     cur.execute(sql)
     rows = cur.fetchall()
